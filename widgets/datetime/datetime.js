@@ -20,7 +20,7 @@ widget = {
           }
 
           var datetimeData = {
-            time: time.lang(data.lang).format('HH:mm'),
+            time: time.lang(data.lang).format('h:mm A'),
             date: moment().lang(data.lang).format('L')
           };
 
@@ -33,7 +33,7 @@ widget = {
 
           var now = new Date();
           var datetimeData = {
-            time: now.getHours() + ":" + now.getMinutes(),
+            time: now.getHours() + ":" + now.getMinutes()+"."+now.getSeconds(),
             date: new Date().toLocaleDateString()
           };
 
@@ -41,7 +41,7 @@ widget = {
         };
       }
 
-      setInterval(updateTime, (10 * 1000));
+      setInterval(updateTime, (1 * 1000));
       updateTime();
       $.data(el, "datetime-initialized", true);
     }

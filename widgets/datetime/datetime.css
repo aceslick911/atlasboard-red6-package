@@ -7,7 +7,9 @@
     line-height: 1em;
     float: right;
 }
-
+.clock-time{
+    font-size: 90px;
+}
 .clock-date {
     line-height: 1em;
     margin-top: 10px;
