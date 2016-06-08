@@ -21,7 +21,7 @@ widget = {
 
           var datetimeData = {
             time: time.lang(data.lang).format('h:mm A'),
-            date: moment().lang(data.lang).format('L')
+            date: moment().lang(data.lang).format('MMM Do YYYY')
           };
 
           $('.content', el).html(template(datetimeData));
