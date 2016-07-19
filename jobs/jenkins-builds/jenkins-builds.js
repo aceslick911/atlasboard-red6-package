@@ -19,6 +19,9 @@ module.exports = function (config, dependencies, job_callback) {
     }
 
     dependencies.easyRequest.JSON(options, function (error, rawBuildData) {
+      if(!rawBuildData){
+        return;
+      }
       var buildTime = moment(rawBuildData.timestamp);
       if (config.lang) {
         buildTime = buildTime.lang(config.lang)
